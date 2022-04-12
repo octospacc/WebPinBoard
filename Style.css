@@ -1,0 +1,72 @@
+/*
+    WebPinBoard
+    Copyright (C) 2022, OctoSpacc
+    https://gitlab.com/octospacc
+
+    This program is free software: you can redistribute it and/or modify
+    it under the terms of the GNU Affero General Public License as
+    published by the Free Software Foundation, either version 3 of the
+    License, or (at your option) any later version.
+
+    This program is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU Affero General Public License for more details.
+
+    You should have received a copy of the GNU Affero General Public License
+    along with this program.  If not, see <https://www.gnu.org/licenses/>.
+*/
+
+Body {
+	Margin: 2%;
+	Padding: 0;
+	Background-Color: #2400DA;
+}
+
+* {
+	Font-Size: Large;
+}
+
+.InfoWindow {
+	Float: Left;
+	Margin: 12px;
+	Padding-Left: 8px;
+	Padding-Right: 8px;
+	Border: Solid 1px #FFFFFF;
+	Color: #FFFFFF;
+}
+
+.InfoWindow a {
+	Color: #10A0F0;
+}
+
+.InfoWindow label {
+	Float: Right;
+}
+
+.window {
+	Float: Left;
+	Margin: 8px;
+}
+
+.window-body, .InfoWindowBody {
+	Display: Block;
+}
+
+:Checked + .window-body, :Checked + .InfoWindowBody {
+	Display: None;
+}
+
+.title-bar {
+	Background: Linear-Gradient(90deg, #3413D9, #5812DA);
+}
+
+#Background > * {
+	Filter: Brightness(20%);
+	Position: Fixed; 
+	Top: 0;
+	Left: 0;
+	Min-Width: 100%;
+	Min-Height: 100%;
+	Z-Index: -8;
+}
