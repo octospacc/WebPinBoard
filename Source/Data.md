@@ -1,4 +1,4 @@
-### Bachecoctt
+### Bachecoctt :Closed
 
 A collection of some of my saved links and resources,  
 neatly (I hope) categorized for everyone!  

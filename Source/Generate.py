@@ -35,39 +35,47 @@ BaseHTML = """
 	<div id="Background"> <!-- https://pixelfed.uno/i/web/post/419157143827461664 (CC BY-SA 4.0) -->
 		<img src="https://i.imgur.com/GwCgSFC.png"> <!-- https://i.imgur.com/5bdkMlg.gif -->
 	</div>
-	<div class="InfoWindow">
-		<label for="{TITLE}-Toggle"><p>Info Open/Close</p></label>
-		<input type="checkbox" id="{TITLE}-Toggle">
-		<div class="InfoWindowBody">
-			{INFO}
-		</div>
-	</div>
+{INFO}
 {BOARDS}
 </body>
 </html>
 """
 
-BoardHTML = """
-	<div class="window">
-		<div class="title-bar">
-			<div class="title-bar-text">
-				{TITLE}
-			</div>
-			<div class="title-bar-controls">
-				<label for="{TITLE}-Toggle"><pre></pre></label>
-			</div>
-		</div>
-		<input type="checkbox" id="{TITLE}-Toggle">
-		<div class="window-body">
-			{CONTENT}
-		</div>
+InfoHTML = """
+<div class="InfoWindow">
+	<label for="{TITLE}-Toggle"><p>Info Open/Close</p></label>
+	<input type="checkbox" id="{TITLE}-Toggle" {CHECKBOX}>
+	<div class="InfoWindowBody">
+		<{H}>{TITLE}</{H}>
+		{CONTENT}
 	</div>
+</div>
 """
 
-# TODO: Just make it work with any heading by itself.. smh
-MainHeading = 'h3'
+BoardHTML = """
+<div class="window">
+	<div class="title-bar">
+		<div class="title-bar-text">
+			{TITLE}
+		</div>
+		<div class="title-bar-controls">
+			<label for="{TITLE}-Toggle"><pre></pre></label>
+		</div>
+	</div>
+	<input type="checkbox" id="{TITLE}-Toggle" {CHECKBOX}>
+	<div class="window-body">
+		{CONTENT}
+	</div>
+</div>
+"""
 
 from markdown import Markdown
+
+MainHeading = ''
+
+def SetMainHeading(Data):
+	global MainHeading
+	MainHeading = 'h' + Data.split('<h')[1].split('>')[0]
 
 def SplitPop(String, Key):
 	List = String.split(Key)
@@ -87,31 +95,43 @@ def GetDataHTML():
 
 def GetBoards(Data):
 	Boards = SplitPop(Data, '<{}>'.format(MainHeading))
-
-	for b in range(len(Boards)):
-		Boards[b] = '<{}>'.format(MainHeading) + Boards[b]
-
+	for i,b in enumerate(Boards):
+		Boards[i] = '<{}>'.format(MainHeading) + b
 	return Boards
 
-def GenBoard(Data):
+def GetBoardParams(Title):
+	if Title.endswith(':Closed'):
+		Checkbox = 'checked'
+		Title = Title[:-len(':Closed')-1]
+	else:
+		Checkbox = ''
+	return (Title, Checkbox)
+
+def GenBoard(Data, Template):
 	Elements = SplitPop(
 		SplitPop(
 			Data,
 			'<{}>'.format(MainHeading))[0],
 		'</{}>'.format(MainHeading))
-	Board = BoardHTML.format(
-		TITLE=Elements[0],
+
+	Title, Checkbox = GetBoardParams(Elements[0])
+
+	Board = Template.format(
+		H=MainHeading,
+		TITLE=Title,
+		CHECKBOX=Checkbox,
 		CONTENT=Elements[1]
 	)
 
 	return Board
 
 def WriteHTML(Info, Boards):
-	Path = 'WebPinBoard.html'
+	Path = 'index.html'
 
+	InfoBoard = GenBoard(Info, InfoHTML)
 	HTMLBoards = ''
 	for b in Boards:
-		HTMLBoards += GenBoard(b)
+		HTMLBoards += GenBoard(b, BoardHTML)
 
 	Title = SplitPop(
 		SplitPop(
@@ -119,13 +139,16 @@ def WriteHTML(Info, Boards):
 			'<{}>'.format(MainHeading))[0],
 		'</{}>'.format(MainHeading))[0]
 
+	Title, Checkbox = GetBoardParams(Title)
+
 	try:
 		with open(Path, 'w') as f:
 			f.write(
 				BaseHTML.format(
 					LICENSE=LICENSE,
 					TITLE=Title,
-					INFO=Info,
+					CHECKBOX=Checkbox,
+					INFO=InfoBoard,
 					BOARDS=HTMLBoards))
 		return True
 	except Exception:
@@ -134,7 +157,9 @@ def WriteHTML(Info, Boards):
 		exit(1)
 
 def Main():
-	Boards = GetBoards(GetDataHTML())
+	Data = GetDataHTML()
+	SetMainHeading(Data)
+	Boards = GetBoards(Data)
 	Info = Boards[0]
 	Boards.pop(0)
 	WriteHTML(Info, Boards)
