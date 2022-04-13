@@ -71,11 +71,13 @@ BoardHTML = """
 
 from markdown import Markdown
 
+"""
 MainHeading = ''
 
-def SetMainHeading(Data):
+def SetMainHeading(HTML):
 	global MainHeading
-	MainHeading = 'h' + Data.split('<h')[1].split('>')[0]
+	MainHeading = 'h' + HTML.split('<h')[1].split('>')[0]
+"""
 
 def SplitPop(String, Key):
 	List = String.split(Key)
@@ -83,6 +85,9 @@ def SplitPop(String, Key):
 		if not s:
 			List.pop(i)
 	return List
+
+def GetHeading(HTML):
+	return 'h' + HTML.split('<h')[1].split('>')[0]
 
 def GetDataHTML():
 	Path = 'Data.md'
@@ -94,9 +99,11 @@ def GetDataHTML():
 		exit(1)
 
 def GetBoards(Data):
-	Boards = SplitPop(Data, '<{}>'.format(MainHeading))
+	print(Data)
+	Boards = SplitPop(Data, '<h') #SplitPop(Data, '<{}>'.format(GetHeading(Data)))
+	print(Boards)
 	for i,b in enumerate(Boards):
-		Boards[i] = '<{}>'.format(MainHeading) + b
+		Boards[i] = '<h' +b #'<{}>'.format(GetHeading(Data)) + b
 	return Boards
 
 def GetBoardParams(Title):
@@ -108,16 +115,18 @@ def GetBoardParams(Title):
 	return (Title, Checkbox)
 
 def GenBoard(Data, Template):
+	Heading = GetHeading(Data)
+	print(Heading)
 	Elements = SplitPop(
 		SplitPop(
 			Data,
-			'<{}>'.format(MainHeading))[0],
-		'</{}>'.format(MainHeading))
+			'<{}>'.format(Heading))[0],
+		'</{}>'.format(Heading))
 
 	Title, Checkbox = GetBoardParams(Elements[0])
 
 	Board = Template.format(
-		H=MainHeading,
+		H=Heading,
 		TITLE=Title,
 		CHECKBOX=Checkbox,
 		CONTENT=Elements[1]
@@ -133,11 +142,12 @@ def WriteHTML(Info, Boards):
 	for b in Boards:
 		HTMLBoards += GenBoard(b, BoardHTML)
 
+	Heading = GetHeading(Info)
 	Title = SplitPop(
 		SplitPop(
 			Info,
-			'<{}>'.format(MainHeading))[0],
-		'</{}>'.format(MainHeading))[0]
+			'<{}>'.format(Heading))[0],
+		'</{}>'.format(Heading))[0]
 
 	Title, Checkbox = GetBoardParams(Title)
 
@@ -158,7 +168,7 @@ def WriteHTML(Info, Boards):
 
 def Main():
 	Data = GetDataHTML()
-	SetMainHeading(Data)
+#	SetMainHeading(Data)
 	Boards = GetBoards(Data)
 	Info = Boards[0]
 	Boards.pop(0)
