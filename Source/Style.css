@@ -27,6 +27,12 @@ Body {
 	Font-Size: Large;
 }
 
+.window {
+	Float: Left;
+	Margin: 8px;
+	Max-Width: 400px;
+}
+
 .InfoWindow {
 	Float: Left;
 	Margin: 12px;
@@ -44,17 +50,33 @@ Body {
 	Float: Right;
 }
 
-.window {
-	Float: Left;
-	Margin: 8px;
-}
-
 .window-body, .InfoWindowBody {
 	Display: Block;
 }
 
+.window-body *, .InfoWindowBody * {
+	Margin-Top: 6px;
+	Margin-Bottom: 6px;
+}
+
+.window-body li, .InfoWindowBody li {
+	Margin-Top: 2px;
+	Margin-Bottom: 2px;
+}
+
+.window-body h1, .window-body h2, .window-body h3, .window-body h4, .window-body h5, .window-body h6,
+.InfoWindowBody h1, .InfoWindowBody h2, .InfoWindowBody h3, .InfoWindowBody h4, .InfoWindowBody h5, .InfoWindowBody h6 {
+	Margin-Top: 12px;
+	Margin-Bottom: 12px;
+}
+
 :Checked + .window-body, :Checked + .InfoWindowBody {
 	Display: None;
+}
+
+.window-body img, .InfoWindowBody img {
+	Max-Width: 100%;
+	Max-Height: 100%;
 }
 
 .title-bar {

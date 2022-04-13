@@ -28,15 +28,17 @@ BaseHTML = """
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>{TITLE}</title>
-	<link rel="stylesheet" href="https://unpkg.com/98.css"> <!-- Credits: https://github.com/jdan/98.css -->
+	<link rel="stylesheet" href="https://unpkg.com/98.css">
 	<link rel="stylesheet" href="Style.css">
 </head>
 <body>
 	<div id="Background"> <!-- https://pixelfed.uno/i/web/post/419157143827461664 (CC BY-SA 4.0) -->
 		<img src="https://i.imgur.com/GwCgSFC.png"> <!-- https://i.imgur.com/5bdkMlg.gif -->
 	</div>
-{INFO}
-{BOARDS}
+	<div class="BoardsContainer">
+		{INFO}
+		{BOARDS}
+	</div>
 </body>
 </html>
 """
@@ -71,14 +73,6 @@ BoardHTML = """
 
 from markdown import Markdown
 
-"""
-MainHeading = ''
-
-def SetMainHeading(HTML):
-	global MainHeading
-	MainHeading = 'h' + HTML.split('<h')[1].split('>')[0]
-"""
-
 def SplitPop(String, Key):
 	List = String.split(Key)
 	for i,s in enumerate(List):
@@ -99,11 +93,9 @@ def GetDataHTML():
 		exit(1)
 
 def GetBoards(Data):
-	print(Data)
-	Boards = SplitPop(Data, '<h') #SplitPop(Data, '<{}>'.format(GetHeading(Data)))
-	print(Boards)
+	Boards = SplitPop(Data, '<h')
 	for i,b in enumerate(Boards):
-		Boards[i] = '<h' +b #'<{}>'.format(GetHeading(Data)) + b
+		Boards[i] = '<h' +b
 	return Boards
 
 def GetBoardParams(Title):
@@ -116,7 +108,7 @@ def GetBoardParams(Title):
 
 def GenBoard(Data, Template):
 	Heading = GetHeading(Data)
-	print(Heading)
+
 	Elements = SplitPop(
 		SplitPop(
 			Data,
@@ -167,9 +159,9 @@ def WriteHTML(Info, Boards):
 		exit(1)
 
 def Main():
-	Data = GetDataHTML()
-#	SetMainHeading(Data)
-	Boards = GetBoards(Data)
+	Boards = GetBoards(
+		GetDataHTML().replace(
+			'<img', '<img loading="lazy"'))
 	Info = Boards[0]
 	Boards.pop(0)
 	WriteHTML(Info, Boards)
