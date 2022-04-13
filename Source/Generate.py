@@ -25,11 +25,17 @@ BaseHTML = """
 {LICENSE}
 <html>
 <head>
-	<meta charset="utf-8">
+	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>{TITLE}</title>
 	<link rel="stylesheet" href="https://unpkg.com/98.css">
 	<link rel="stylesheet" href="Style.css">
+
+	<title>{TITLE}</title>
+	<meta property="og:title" content="{TITLE}">
+	<meta name="description" content="Personal Static HTML Pinboard">
+	<meta property="og:description" content="Personal Static HTML Pinboard">
+	<meta property="og:url" content="https://octospacc.gitlab.io/WebPinBoard">
+	<!-- <meta property="og:image" content="Screenshot.jpg"> -->
 </head>
 <body>
 	<div id="Background"> <!-- https://pixelfed.uno/i/web/post/419157143827461664 (CC BY-SA 4.0) -->
