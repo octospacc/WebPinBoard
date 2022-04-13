@@ -30,7 +30,18 @@ Body {
 .window {
 	Float: Left;
 	Margin: 8px;
-	Max-Width: 400px;
+}
+
+@Media (Min-Width: 796px) {
+	.window {
+		Max-Width: 360px;
+	}
+}
+
+@Media (Min-Width: 956px) {
+	.window {
+		Max-Width: 410px;
+	}
 }
 
 .InfoWindow {

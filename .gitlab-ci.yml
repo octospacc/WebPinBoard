@@ -3,6 +3,7 @@ image: alpine:latest
 before_script:
   - apk update
   - apk add python3 py3-pip
+  - pip3 install -r Source/requirements.txt
 
 pages:
   stage: deploy
@@ -10,7 +11,6 @@ pages:
   - mkdir public
   - cp -R Source/* public/
   - cd public
-  - pip3 install -r requirements.txt
   - python3 Generate.py
   artifacts:
     paths:

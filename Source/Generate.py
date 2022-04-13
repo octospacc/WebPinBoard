@@ -35,7 +35,7 @@ BaseHTML = """
 	<meta name="description" content="Personal Static HTML Pinboard">
 	<meta property="og:description" content="Personal Static HTML Pinboard">
 	<meta property="og:url" content="https://octospacc.gitlab.io/WebPinBoard">
-	<!-- <meta property="og:image" content="Screenshot.jpg"> -->
+	<meta property="og:image" content="Screenshot.png">
 </head>
 <body>
 	<div id="Background"> <!-- https://pixelfed.uno/i/web/post/419157143827461664 (CC BY-SA 4.0) -->

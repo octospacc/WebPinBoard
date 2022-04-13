@@ -10,7 +10,7 @@ uwu links..
 
 ### My personal links!
 
-- [Home](https://octospacc.gitlab.io) - Home page of this site!
+- [Home](../) - Home page of this site!
 
 - [Mastodon](https://mastodon.uno/@octo) - Microblog, 98% italian
 - [Pixelfed](https://pixelfed.uno/@octo) - Where I post my pictures

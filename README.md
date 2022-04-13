@@ -9,6 +9,13 @@ It works like this:
 Right now, it requires no JavaScript, just some CSS for displaying everything on screen correctly.  
 (TODO: Make sure the generated page is at least readable on browsers without CSS3 support).
 
+## Live demo
+
+Live demo (which is also my personal board) is hosted in this repo and available on my website!  
+[octospacc.gitlab.io/WebPinBoard](https://octospacc.gitlab.io/WebPinBoard/)
+
+![Screenshot](Source/Screenshot.png)
+
 ## Writing
 
 The Markdown data file has a simple structure:
