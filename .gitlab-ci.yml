@@ -7,13 +7,13 @@ before_script:
 pages:
   stage: deploy
   script:
-  - mkdir Dist
-  - cp -R Source/* Dist/
-  - cd Dist
+  - mkdir public
+  - cp -R Source/* public/
+  - cd public
   - pip3 install -r requirements.txt
   - python3 Generate.py
   artifacts:
     paths:
-    - Dist
+    - public
   rules:
     - if: $CI_COMMIT_REF_NAME == $CI_DEFAULT_BRANCH
