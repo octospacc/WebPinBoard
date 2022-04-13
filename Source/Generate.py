@@ -71,12 +71,12 @@ from markdown import Markdown
 
 def SplitPop(String, Key):
 	List = String.split(Key)
-	for s in range(len(List)-1):
-		if not List[s]:
-			List.pop(s)
+	for i,s in enumerate(List):
+		if not s:
+			List.pop(i)
 	return List
 
-def GetData():
+def GetDataHTML():
 	Path = 'Data.md'
 	try:
 		with open(Path, 'r') as f:
@@ -87,18 +87,10 @@ def GetData():
 
 def GetBoards(Data):
 	Boards = SplitPop(Data, '<{}>'.format(MainHeading))
-	#if not Boards[0]:
-	#	Boards.pop(0)
-	
-	#print(Boards)
-	
+
 	for b in range(len(Boards)):
-		#print(Boards[b])
-		#Boards += ['<h1>' + b]
-		#Boards.pop(0)
 		Boards[b] = '<{}>'.format(MainHeading) + Boards[b]
-		
-	#print(Boards)
+
 	return Boards
 
 def GenBoard(Data):
@@ -111,7 +103,7 @@ def GenBoard(Data):
 		TITLE=Elements[0],
 		CONTENT=Elements[1]
 	)
-	
+
 	return Board
 
 def WriteHTML(Info, Boards):
@@ -120,16 +112,13 @@ def WriteHTML(Info, Boards):
 	HTMLBoards = ''
 	for b in Boards:
 		HTMLBoards += GenBoard(b)
-	
-	#print(Info)
-	print(HTMLBoards)
-	
+
 	Title = SplitPop(
 		SplitPop(
 			Info,
 			'<{}>'.format(MainHeading))[0],
 		'</{}>'.format(MainHeading))[0]
-	
+
 	try:
 		with open(Path, 'w') as f:
 			f.write(
@@ -138,11 +127,6 @@ def WriteHTML(Info, Boards):
 					TITLE=Title,
 					INFO=Info,
 					BOARDS=HTMLBoards))
-					
-					#BODY=BoardHTML.format(
-					#	TITLE="",
-					#	CONTENT=""
-					#)))
 		return True
 	except Exception:
 		raise
@@ -150,18 +134,9 @@ def WriteHTML(Info, Boards):
 		exit(1)
 
 def Main():
-	Data = GetData()
-	Boards = GetBoards(Data)
-	
-	#print(Data)
-	print(Boards)
-	
+	Boards = GetBoards(GetDataHTML())
 	Info = Boards[0]
 	Boards.pop(0)
-	
-	print(Info)
-	print(Boards)
-	
 	WriteHTML(Info, Boards)
 
 if __name__ == '__main__':
