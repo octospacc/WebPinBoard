@@ -13,33 +13,53 @@ uwu links..
 
 - [Home](../) - Home page of this site!
 
-- [Mastodon](https://mastodon.uno/@octo) - Microblog, 98% italian
-- [Pixelfed](https://pixelfed.uno/@octo) - Where I post my pictures
-- [Noblogo](https://noblogo.org/loli-documentatrice) - Blog, 100% italian (!)
+- [Mastodon](https://mastodon.uno/@octo) - Microblog, 98% italian  
+- [Pixelfed](https://pixelfed.uno/@octo) - Where I post my pictures  
+- [Noblogo](https://noblogo.org/loli-documentatrice) - Blog, 100% italian (!)  
 
 
 ### Awesome Big Libre Games!
-
-[Techmino](https://github.com/26F-Studio/Techmino) - Flashy libre Tetris :)  
-[Sonic Robo Blast 2](https://www.srb2.org) - Sonic pseudo-3D platformer  
-[Minetest](https://www.minetest.net) - Minining, crafting, and exploring game  
-[SuperTux](https://www.supertux.org) - Classic platformer but with the Linux penguin  
-[Extreme Tux Racer](https://sourceforge.net/projects/extremetuxracer) - Snow racing game, with the Linux penguin  
-[SuperTuxKart](https://supertuxkart.net) - Kart racing with many libre mascots  
+- [Techmino](https://github.com/26F-Studio/Techmino) - Flashy libre Tetris :)  
+- [Sonic Robo Blast 2](https://www.srb2.org) - Sonic pseudo-3D platformer  
+- [Minetest](https://www.minetest.net) - Minining, crafting, and exploring game  
+- [SuperTux](https://www.supertux.org) - Classic platformer but with the Linux penguin  
+- [Extreme Tux Racer](https://sourceforge.net/projects/extremetuxracer) - Snow racing game, with the Linux penguin  
+- [SuperTuxKart](https://supertuxkart.net) - Kart racing with many libre mascots  
+- [Xonotic](https://xonotic.org) - Super fast arena FPS  
+- [osu! lazer](https://github.com/ppy/osu) - Flashy multi-mode rhythm game  
 
 
 ### Awesome Arcade Libre Games!
+- [krassesSpiel](https://f-droid.org/packages/com.autismprime.krassesSpiel) - Shooting at boxes and avoiding enemy projectiles  
+- [Antimine](https://f-droid.org/packages/dev.lucanlm.antimine) - Classic Minesweeper with a modern look  
 
-[krassesSpiel](https://f-droid.org/packages/com.autismprime.krassesSpiel) - Shooting at boxes and avoiding enemy projectiles  
-[Antimine](https://f-droid.org/packages/dev.lucanlm.antimine) - Classic Minesweeper with a modern look  
+
+### Awesome Libre Cross-Platform Tools!
+- [Rclone](https://rclone.org) - CLI tool for managing cloud storage in flexible ways  
+- [Cryptomator](https://cryptomator.org) - Data encryption tool with cloud storage in mind  
+- [7-Zip](https://www.7-zip.org) - Useful file archiver supporting the efficient 7z format  
+
+
+### Awesome Libre Server-Side Software!
+- [Mastodon](https://github.com/mastodon/mastodon) - Federated microblogging social platform  
+- [Pixelfed](https://github.com/pixelfed/pixelfed) - Federated photo/video sharing platform  
+- [Invidious](https://github.com/iv-org/invidious) - YouTube alternative frontend  
+- [Nitter](https://github.com/zedeus/nitter) - Twitter alternative frontend  
+
+
+### MicroPython Stuff!
+- [MicroPython](https://micropython.org) - MP itself, a lightweight Python implementation  
+- [FBConsole](https://github.com/boochow/FBConsole) - Frame buffer console class for MP (for displaying Python REPL on a display)  
+- [Micropython-Editor](https://github.com/robert-hh/Micropython-Editor) - Console text editor for MP  
+- [SH1106](https://github.com/robert-hh/SH1106) - MP driver for SH1106 OLED displays  
+- [PCF8574](https://github.com/mcauser/micropython-pcf8574) - MP driver for PCF8574 8-Bit I2C I/O Expander  
 
 
 ### Awesome Libre Android Tools!
-
-[WiGLE WiFi Wardriving](https://f-droid.org/packages/net.wigle.wigleandroid) - Tool for geomapping WiFi APs and Bluetooth devices  
-[Gadgetbridge](https://f-droid.org/packages/nodomain.freeyourgadget.gadgetbridge) - Libre companion app for proprietary smart bands  
-[Termux](https://f-droid.org/packages/com.termux) - Terminal emulator with integrated package manager and repos  
-[Linux Deploy](https://github.com/meefik/linuxdeploy) - Quick tool for running full Linux distros on Android (containerized with Chroot); Use v<=2.5.1 for Android<5; Use v<=2.4.1 for Proot (no root needed on Android);  
+- [WiGLE WiFi Wardriving](https://f-droid.org/packages/net.wigle.wigleandroid) - Tool for geomapping WiFi APs and Bluetooth devices  
+- [Gadgetbridge](https://f-droid.org/packages/nodomain.freeyourgadget.gadgetbridge) - Libre companion app for proprietary smart bands  
+- [Termux](https://f-droid.org/packages/com.termux) - Terminal emulator with integrated package manager and repos  
+- [Linux Deploy](https://github.com/meefik/linuxdeploy) - Quick tool for running full Linux distros on Android (containerized with Chroot); Use v<=2.5.1 for Android<5; Use v<=2.4.1 for Proot (no root needed on Android);  
 
 
 ### Finestra test 2 :Closed
