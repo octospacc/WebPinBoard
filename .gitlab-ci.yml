@@ -2,7 +2,7 @@ image: alpine:latest
 
 before_script:
   - apk update
-  - apk add python3 py3-pip
+  - apk add python3 py3-pip wkhtmltopdf
   - pip3 install -r Source/requirements.txt
 
 pages:
@@ -12,6 +12,7 @@ pages:
   - cp -R Source/* public/
   - cd public
   - python3 Generate.py
+  - wkhtmltoimage --height 720 --quality 0 "https://octospacc.gitlab.io/WebPinBoard/" "Screenshot.png"
   artifacts:
     paths:
     - public

@@ -1,4 +1,4 @@
-### Bachecoctt :Closed
+### Bachecoctt
 
 A collection of some of my saved links and resources,  
 neatly (I hope) categorized for everyone!  
@@ -40,11 +40,37 @@ uwu links..
 - [7-Zip](https://www.7-zip.org) - Useful file archiver supporting the efficient 7z format  
 
 
+### Awesome Libre Desktop Tools!
+- [CoolRetroTerm](https://github.com/Swordfish90/cool-retro-term) - Terminal emulator that emulates a CRT monitor  
+- [Olive](https://olivevideoeditor.org) - Nice and simple video editor  
+- [Mint Webapp Manager](https://github.com/linuxmint/webapp-manager) - Using webapps as desktop apps  
+
+
+### Awesome Desktop Linux Themes!
+- [Chicago95](https://github.com/grassmunk/Chicago95) - Windows 95 theme for XFCE
+
+
+### Awesome Libre Dev Stuff!
+- [TIC-80](https://tic80.com) - Fantasy retro computer  
+
+
+### Awesome Emulation Stuff!
+- [Dolphin Emulator](https://dolphin-emu.org) - Emulator for the GameCube + Overclocked GameCube  
+- [yuzu](https://yuzu-emu.org), [Ryujinx](https://ryujinx.org), [Skyline](https://github.com/skyline-emu/skyline) emulator - Switch emulators
+
+
 ### Awesome Libre Server-Side Software!
 - [Mastodon](https://github.com/mastodon/mastodon) - Federated microblogging social platform  
 - [Pixelfed](https://github.com/pixelfed/pixelfed) - Federated photo/video sharing platform  
 - [Invidious](https://github.com/iv-org/invidious) - YouTube alternative frontend  
 - [Nitter](https://github.com/zedeus/nitter) - Twitter alternative frontend  
+
+
+### Awesome Libre Android Tools!
+- [WiGLE WiFi Wardriving](https://f-droid.org/packages/net.wigle.wigleandroid) - Tool for geomapping WiFi APs and Bluetooth devices  
+- [Gadgetbridge](https://f-droid.org/packages/nodomain.freeyourgadget.gadgetbridge) - Libre companion app for proprietary smart bands  
+- [Termux](https://f-droid.org/packages/com.termux) - Terminal emulator with integrated package manager and repos  
+- [Linux Deploy](https://github.com/meefik/linuxdeploy) - Quick tool for running full Linux distros on Android (containerized with Chroot); Use v<=2.5.1 for Android<5; Use v<=2.4.1 for Proot (no root needed on Android);  
 
 
 ### MicroPython Stuff!
@@ -53,13 +79,6 @@ uwu links..
 - [Micropython-Editor](https://github.com/robert-hh/Micropython-Editor) - Console text editor for MP  
 - [SH1106](https://github.com/robert-hh/SH1106) - MP driver for SH1106 OLED displays  
 - [PCF8574](https://github.com/mcauser/micropython-pcf8574) - MP driver for PCF8574 8-Bit I2C I/O Expander  
-
-
-### Awesome Libre Android Tools!
-- [WiGLE WiFi Wardriving](https://f-droid.org/packages/net.wigle.wigleandroid) - Tool for geomapping WiFi APs and Bluetooth devices  
-- [Gadgetbridge](https://f-droid.org/packages/nodomain.freeyourgadget.gadgetbridge) - Libre companion app for proprietary smart bands  
-- [Termux](https://f-droid.org/packages/com.termux) - Terminal emulator with integrated package manager and repos  
-- [Linux Deploy](https://github.com/meefik/linuxdeploy) - Quick tool for running full Linux distros on Android (containerized with Chroot); Use v<=2.5.1 for Android<5; Use v<=2.4.1 for Proot (no root needed on Android);  
 
 
 ### Finestra test 2 :Closed
