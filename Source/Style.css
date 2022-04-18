@@ -40,7 +40,7 @@ Body {
 
 @Media (Min-Width: 956px) {
 	.window {
-		Max-Width: 410px;
+		Max-Width: 400px;
 	}
 }
 
