@@ -4,8 +4,8 @@ before_script:
   - apk update
   - apk add python3 py3-pip wget qt5-qtbase
   - pip3 install -r Source/requirements.txt
-  - #wget "https://dl-cdn.alpinelinux.org/alpine/v3.14/community/x86_64/wkhtmltopdf-0.12.6-r0.apk"
-  - #apk add --allow-untrusted wkhtmltopdf-0.12.6-r0.apk
+#  - wget "https://dl-cdn.alpinelinux.org/alpine/v3.14/community/x86_64/wkhtmltopdf-0.12.6-r0.apk"
+#  - apk add --allow-untrusted wkhtmltopdf-0.12.6-r0.apk
 
 pages:
   stage: deploy
@@ -14,7 +14,7 @@ pages:
   - cp -R Source/* public/
   - cd public
   - python3 Generate.py
-  - #wkhtmltoimage --height 720 --quality 0 "https://octospacc.gitlab.io/WebPinBoard/" "Screenshot.png"
+#  - wkhtmltoimage --height 720 --quality 0 "https://octospacc.gitlab.io/WebPinBoard/" "Screenshot.png"
   artifacts:
     paths:
     - public
