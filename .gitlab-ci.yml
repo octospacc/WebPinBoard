@@ -2,7 +2,7 @@ image: alpine:latest
 
 before_script:
   - apk update
-  - apk add python3 py3-pip wget
+  - apk add python3 py3-pip wget qt5-qtbase
   - pip3 install -r Source/requirements.txt
   - wget "https://dl-cdn.alpinelinux.org/alpine/v3.14/community/x86_64/wkhtmltopdf-0.12.6-r0.apk"
   - apk add --allow-untrusted wkhtmltopdf-0.12.6-r0.apk
