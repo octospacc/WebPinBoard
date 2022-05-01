@@ -32,26 +32,43 @@ uwu links..
 ### Awesome Arcade Libre Games!
 - [krassesSpiel](https://f-droid.org/packages/com.autismprime.krassesSpiel) - Shooting at boxes and avoiding enemy projectiles  
 - [Antimine](https://f-droid.org/packages/dev.lucanlm.antimine) - Classic Minesweeper with a modern look  
+- [SpaceCadetPinball](https://github.com/k4zmu2a/SpaceCadetPinball) - The classic 3D Pinball  
+- [HexGL](https://hexgl.bkcore.com) - F-Zero inspired, fast racing game  
+- [TuxPuck] - Penguin air hockey game
+
+### Awesome Libre Demos!
+- [bb](http://aa-project.sourceforge.net/bb) - AA-lib text animation demo  
 
 
 ### Awesome Libre Cross-Platform Tools!
 - [Rclone](https://rclone.org) - CLI tool for managing cloud storage in flexible ways  
 - [Cryptomator](https://cryptomator.org) - Data encryption tool with cloud storage in mind  
 - [7-Zip](https://www.7-zip.org) - Useful file archiver supporting the efficient 7z format  
-
+- [GNU nano](https://www.nano-editor.org), [ne](https://ne.di.unimi.it) - CLI text editors  
+- [htop](https://htop.dev), [bottom](https://github.com/ClementTsang/bottom), [btop](https://github.com/aristocratos/btop) - CLI system monitors  
+- [bat](https://github.com/sharkdp/bat) - Advanced cat clone  
+- [RustDesk](https://github.com/rustdesk/rustdesk) - Promising remote desktop software  
+- [Deskreen](https://github.com/pavlobu/deskreen) - Turns a secondary PC into a secondary screen for a primary PC  
 
 ### Awesome Libre Desktop Tools!
 - [CoolRetroTerm](https://github.com/Swordfish90/cool-retro-term) - Terminal emulator that emulates a CRT monitor  
+- [OBS Studio](https://obsproject.com) - Advanced video recording/streaming tool  
 - [Olive](https://olivevideoeditor.org) - Nice and simple video editor  
+- [Kdenlive](https://kdenlive.org) - Video editor from KDE  
 - [Mint Webapp Manager](https://github.com/linuxmint/webapp-manager) - Using webapps as desktop apps  
 
 
 ### Awesome Desktop Linux Themes!
-- [Chicago95](https://github.com/grassmunk/Chicago95) - Windows 95 theme for XFCE
+- [Chicago95](https://github.com/grassmunk/Chicago95) - Windows 95 theme for XFCE  
+- [Papirus](https://github.com/PapirusDevelopmentTeam/papirus-icon-theme) - Material icon theme  
 
 
 ### Awesome Libre Dev Stuff!
 - [TIC-80](https://tic80.com) - Fantasy retro computer  
+
+
+### Awesome Web Frameworks!
+- [98.css](https://github.com/jdan/98.css) - Win98-styled CSS
 
 
 ### Awesome Emulation Stuff!
