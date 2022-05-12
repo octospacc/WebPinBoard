@@ -16,11 +16,18 @@ uwu links..
 - [Mastodon](https://mastodon.uno/@octo) - Microblog, 98% italian  
 - [Pixelfed](https://pixelfed.uno/@octo) - Where I post my pictures  
 - [Noblogo](https://noblogo.org/loli-documentatrice) - Blog, 100% italian (!)  
+- Spacc Inc - [Website](https://spacc.xyz), [Telegram (photos of broken stuff)](https://t.me/s/SpaccInc)  
+- SpaccCraft, my Minecraft server (italian): [Website](https://spacccraft.altervista.org), [Telegram](https://t.me/s/SpaccCraft), [Misskey](https://misskey.social/@SpaccCraft)  
+
+
+### Scripts and Configs
+- [Andronix Scripts](https://github.com/AndronixApp/AndronixOrigin) - Scripts to install containerized Linux distros on Android in Termux  
 
 
 ### Awesome Big Libre Games!
 - [Techmino](https://github.com/26F-Studio/Techmino) - Flashy libre Tetris :)  
 - [Sonic Robo Blast 2](https://www.srb2.org) - Sonic pseudo-3D platformer  
+- [Sonic Robo Blast 2 Kart](https://wiki.srb2.org/wiki/SRB2Kart) - Sonic pseudo-3D kart racing  
 - [Minetest](https://www.minetest.net) - Minining, crafting, and exploring game  
 - [SuperTux](https://www.supertux.org) - Classic platformer but with the Linux penguin  
 - [Extreme Tux Racer](https://sourceforge.net/projects/extremetuxracer) - Snow racing game, with the Linux penguin  
@@ -34,7 +41,8 @@ uwu links..
 - [Antimine](https://f-droid.org/packages/dev.lucanlm.antimine) - Classic Minesweeper with a modern look  
 - [SpaceCadetPinball](https://github.com/k4zmu2a/SpaceCadetPinball) - The classic 3D Pinball  
 - [HexGL](https://hexgl.bkcore.com) - F-Zero inspired, fast racing game  
-- [TuxPuck] - Penguin air hockey game
+- [TuxPuck](https://packages.debian.org/search?keywords=tuxpuck) - Penguin air hockey game  
+
 
 ### Awesome Libre Demos!
 - [bb](http://aa-project.sourceforge.net/bb) - AA-lib text animation demo  
@@ -49,6 +57,9 @@ uwu links..
 - [bat](https://github.com/sharkdp/bat) - Advanced cat clone  
 - [RustDesk](https://github.com/rustdesk/rustdesk) - Promising remote desktop software  
 - [Deskreen](https://github.com/pavlobu/deskreen) - Turns a secondary PC into a secondary screen for a primary PC  
+- [Standard Notes](https://github.com/standardnotes) - Clean encrypted notes app  
+- [Tor Project](https://www.torproject.org) - Anonymity online  
+
 
 ### Awesome Libre Desktop Tools!
 - [CoolRetroTerm](https://github.com/Swordfish90/cool-retro-term) - Terminal emulator that emulates a CRT monitor  
@@ -68,19 +79,28 @@ uwu links..
 
 
 ### Awesome Web Frameworks!
-- [98.css](https://github.com/jdan/98.css) - Win98-styled CSS
+- [98.css](https://github.com/jdan/98.css), [XP.css](https://github.com/botoxparty/XP.css), [7.css](https://github.com/khang-nd/7.css) - Windows-styled CSS  
 
 
 ### Awesome Emulation Stuff!
 - [Dolphin Emulator](https://dolphin-emu.org) - Emulator for the GameCube + Overclocked GameCube  
-- [yuzu](https://yuzu-emu.org), [Ryujinx](https://ryujinx.org), [Skyline](https://github.com/skyline-emu/skyline) emulator - Switch emulators
+- [yuzu](https://yuzu-emu.org), [Ryujinx](https://ryujinx.org), [Skyline](https://github.com/skyline-emu/skyline) emulator - Switch emulators  
+
+
+### Fediverse Bonanza!
+- [Mastodon](https://github.com/mastodon/mastodon) - Simple microblogging  
+- [tooot](https://github.com/tooot-app/app) - Clean mobile Mastodon client  
+- [Friendica](https://github.com/friendica/friendica) - Advanced macroblogging and communication  
+- [Misskey](https://github.com/misskey-dev/misskey) - Colorful and advanced microblogging  
+- [Pixelfed](https://github.com/pixelfed/pixelfed) - Photo/video sharing  
+- [Lemmy](https://github.com/LemmyNet/lemmy) - Link aggregator   
 
 
 ### Awesome Libre Server-Side Software!
-- [Mastodon](https://github.com/mastodon/mastodon) - Federated microblogging social platform  
-- [Pixelfed](https://github.com/pixelfed/pixelfed) - Federated photo/video sharing platform  
-- [Invidious](https://github.com/iv-org/invidious) - YouTube alternative frontend  
-- [Nitter](https://github.com/zedeus/nitter) - Twitter alternative frontend  
+- [Invidious](https://github.com/iv-org/invidious) - YouTube frontend  
+- [Nitter](https://github.com/zedeus/nitter) - Twitter frontend  
+- [Bibliogram](https://sr.ht/~cadence/bibliogram) - Instagram frontend  
+- [Libreddit](https://github.com/spikecodes/libreddit) - Reddit frontend
 
 
 ### Awesome Libre Android Tools!
@@ -88,6 +108,9 @@ uwu links..
 - [Gadgetbridge](https://f-droid.org/packages/nodomain.freeyourgadget.gadgetbridge) - Libre companion app for proprietary smart bands  
 - [Termux](https://f-droid.org/packages/com.termux) - Terminal emulator with integrated package manager and repos  
 - [Linux Deploy](https://github.com/meefik/linuxdeploy) - Quick tool for running full Linux distros on Android (containerized with Chroot); Use v<=2.5.1 for Android<5; Use v<=2.4.1 for Proot (no root needed on Android);  
+- [NewPipe](https://github.com/TeamNewPipe/NewPipe) - Frontend for YouTube and other platforms  
+- [Lawndesk](https://github.com/renzhn/Lawndesk) - Launcher without app drawer  
+- [Taskbar](https://github.com/farmerbb/Taskbar) - Desktop-like launcher  
 
 
 ### MicroPython Stuff!
