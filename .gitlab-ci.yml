@@ -1,0 +1,24 @@
+image: alpine:latest
+
+before_script:
+  - apk update
+  - apk add python3 py3-pip wget git qt5-qtbase
+#  - wget "https://dl-cdn.alpinelinux.org/alpine/v3.14/community/x86_64/wkhtmltopdf-0.12.6-r0.apk"
+#  - apk add --allow-untrusted wkhtmltopdf-0.12.6-r0.apk
+
+pages:
+  stage: deploy
+  script:
+  - git clone --depth 1 https://gitlab.com/octospacc/WebPinBoard
+  - pip3 install -r ./WebPinBoard/Source/requirements.txt
+  - mkdir ./public
+  - mv ./WebPinBoard/Source/* ./public/
+  - mv ./Source/* ./public/
+  - cd ./public
+  - python3 ./Generate.py
+#  - wkhtmltoimage --height 720 --quality 0 "https://octospacc.gitlab.io/WebPinBoard/" "Screenshot.png"
+  artifacts:
+    paths:
+    - public
+  rules:
+    - if: $CI_COMMIT_REF_NAME == $CI_DEFAULT_BRANCH
